@@ -6,6 +6,8 @@
   },
   "scripts": {
     "build": "tsc",
+    "serve": "ts-node --esm src/index.ts",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
     "test": "echo 'No tests defined'"
   },
   "dependencies": {
@@ -14,7 +16,12 @@
     "openai": "^4.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "@types/node": "^20.11.30"
+    "typescript": "^5.4.2",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.12.5",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "eslint-config-prettier": "^9.1.0"
   }
 }
