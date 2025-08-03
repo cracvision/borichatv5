@@ -27,4 +27,3 @@ jobs:
           projectId: 'borichatv5'
           channelId: live
           targets: functions
-
