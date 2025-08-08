@@ -1,20 +1,19 @@
 {
-  "name": "bori-functions",
+  "name": "borichatv5-functions",
   "private": true,
-  "type": "module",
+  "main": "lib/index.js",
+  "type": "commonjs",
   "engines": { "node": "20" },
   "scripts": {
     "build": "tsc -p .",
-    "serve": "npm run build && firebase emulators:start --only functions,firestore,storage",
-    "deploy": "npm run build && firebase deploy --only functions"
+    "deploy": "firebase deploy --only functions"
   },
   "dependencies": {
     "firebase-admin": "^12.5.0",
-    "firebase-functions": "^5.0.0",
+    "firebase-functions": "^5.0.1",
     "openai": "^4.55.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.4.0"
   }
 }
-
