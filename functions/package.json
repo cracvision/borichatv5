@@ -1,28 +1,20 @@
 {
-  "name": "functions",
+  "name": "bori-functions",
+  "private": true,
   "type": "module",
-  "engines": {
-    "node": "20"
-  },
+  "engines": { "node": "20" },
   "scripts": {
-    "build": "tsc",
-    "serve": "ts-node --esm src/index.ts",
-    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings 0",
-    "test": "echo 'No tests defined'"
+    "build": "tsc -p .",
+    "serve": "npm run build && firebase emulators:start --only functions,firestore,storage",
+    "deploy": "npm run build && firebase deploy --only functions"
   },
   "dependencies": {
-    "firebase-admin": "^11.10.1",
-    "firebase-functions": "^4.4.1",
-    "openai": "^4.0.0",
-    "@sendinblue/client": "^9"
+    "firebase-admin": "^12.5.0",
+    "firebase-functions": "^5.0.0",
+    "openai": "^4.55.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.2",
-    "ts-node": "^10.9.2",
-    "@types/node": "^20.12.5",
-    "eslint": "^9.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "eslint-config-prettier": "^9.1.0"
+    "typescript": "^5.5.4"
   }
 }
+

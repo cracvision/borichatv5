@@ -1,0 +1,15 @@
+# Ignorar toda la salida compilada
+lib/
+
+# (opcional) Si alguna vez necesitas conservar .js fuera de lib/, 
+# puedes dejar las reglas antiguas comentadas como referencia.
+# lib/**/*.js
+# lib/**/*.js.map
+
+# TypeScript v1 declaration files
+typings/
+
+# Node.js dependency directory
+node_modules/
+
+*.local
